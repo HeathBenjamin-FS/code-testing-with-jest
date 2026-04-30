@@ -39,6 +39,11 @@ describe("reverseStr common issues", () => {
   test("test should reverse a boolean after converting it to a string", () => {
     expect(reverseStr(true)).toBe("eurt");
   });
+
+  test("test should handle numbers only", () => {
+    expect(reverseStr(123)).toBe("321");
+    expect(reverseStr(-31)).toBe("13-");
+  });
 });
 
 test("Test function: capitalizeWords", () => {
